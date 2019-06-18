@@ -1,0 +1,47 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+        function OnCommandExecuted(s, e) {
+            var command = e.item.name;
+            Spreadsheet.PerformCallback({ customCommand: command })
+        }
+
+</script>
+
+@Html.DevExpress().Ribbon(settings => {
+    settings.Name = "Ribbon";
+    settings.ShowFileTab = false;
+    settings.ShowTabs = false;
+    settings.OneLineMode = true;
+
+    settings.ClientSideEvents.CommandExecuted = "OnCommandExecuted";
+    var group = settings.Tabs.Add("Home").Groups.Add("Group 0");
+ 
+    group.Items.Add(MVCxRibbonItemType.ButtonItem, i => {
+        i.Text = "Apply formatting";
+        i.Name = "applyFormatting";
+        ((RibbonButtonItem)i).LargeImage.IconID = IconID.ActionsNew32x32;
+    });
+    group.Items.Add(MVCxRibbonItemType.ButtonItem, i => {
+        i.Text = "Insert link";
+        i.Name = "insertLink";
+        i.Size = RibbonItemSize.Small;
+
+    });
+    group.Items.Add(MVCxRibbonItemType.ButtonItem, i => {
+        i.Text = "Draw Borders";
+        i.Name = "drawBorders";
+        i.Size = RibbonItemSize.Small;
+    });
+    group.Items.Add(MVCxRibbonItemType.ButtonItem, i => {
+        i.Text = "Show total";
+        i.Name = "showTotal";
+        i.Size = RibbonItemSize.Small;
+
+    });
+}).GetHtml()
+
+@using (Html.BeginForm()) {
+    @Html.Action("SpreadsheetPartial")
+}

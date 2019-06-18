@@ -1,0 +1,12 @@
+@Html.DevExpress().Spreadsheet(settings => {
+    settings.Name = "Spreadsheet";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "SpreadsheetPartial" };
+    settings.CustomActionRouteValues = new { Controller = "Home", Action = "CustomAction" };
+
+    settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+    settings.Height = 500;
+    settings.ReadOnly = false;
+    settings.WorkDirectory = "~/Docs";
+    settings.RibbonMode = SpreadsheetRibbonMode.Ribbon;
+
+}).Open(Server.MapPath("~/Docs/testDocument1.xlsx")).GetHtml()
