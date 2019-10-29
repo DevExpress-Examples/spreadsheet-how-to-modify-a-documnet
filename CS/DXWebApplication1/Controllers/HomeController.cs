@@ -26,7 +26,7 @@ namespace DXWebApplication1.Controllers
            
             switch (customCommand) {
                 case "applyFormatting":
-                    Range priceRange = worksheet.Range["C2:C15"];
+                    CellRange priceRange = worksheet.Range["C2:C15"];
                     Formatting rangeFormatting = priceRange.BeginUpdateFormatting();
                     rangeFormatting.Font.Color = Color.SandyBrown;
                     rangeFormatting.Font.FontStyle = SpreadsheetFontStyle.Bold;
@@ -44,7 +44,7 @@ namespace DXWebApplication1.Controllers
                     worksheet.Hyperlinks.Add(cell1, "https://documentation.devexpress.com/OfficeFileAPI/14912/Spreadsheet-Document-API", true, "Spreadsheet Document API");
                     break;
                 case "drawBorders":
-                    Range tableRange = worksheet.Range["A2:E16"];
+                    CellRange tableRange = worksheet.Range["A2:E16"];
                     tableRange.Borders.SetAllBorders(Color.RosyBrown, BorderLineStyle.Hair);
                     break;
                 case "showTotal":
