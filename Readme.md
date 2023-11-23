@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/192545604/)**
 <!-- run online end -->
 
-This example demonstrates how to modify a document in the [Spreadsheet](https://docs.devexpress.com/AspNetMvc/17113/components/spreadsheet) extension.
+This example demonstrates how to programmatically modify a document in the [Spreadsheet](https://docs.devexpress.com/AspNetMvc/17113/components/spreadsheet) extension.
 
 ## Implementation Details
 
