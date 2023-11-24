@@ -20,7 +20,7 @@ In this example, a ribbon contains four buttons that apply predefined settings t
  }
 ```
 
-On the server, the [CustomActionRouteValues](https://docs.devexpress.com/AspNet/DevExpress.Web.Mvc.SpreadsheetSettings.CustomActionRouteValues) action implements the required document modifications.
+On the server, the [CustomActionRouteValues](https://docs.devexpress.com/AspNet/DevExpress.Web.Mvc.SpreadsheetSettings.CustomActionRouteValues) action implements document modifications.
  
 ```csharp
 public ActionResult CustomAction(string customCommand) {
