@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Spreadsheet for ASP.NET MVC - How to modify a document
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/192545604/)**
-<!-- run online end -->
 
 This example demonstrates how to programmatically modify a document in the [Spreadsheet](https://docs.devexpress.com/AspNetMvc/17113/components/spreadsheet) extension.
 
